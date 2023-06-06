@@ -20,13 +20,35 @@ class Main {
    
     switch (stan){
       case 1:
+        int iloscZmian = 0;
   System.out.println("Twoje slowo: "+ a);
-  System.out.println("Twoje slowo po modyfikacji: "+ a.toUpperCase());
+      for (int i = 0; i < a.length(); i++) {
+      char aktualnyZnak = a.charAt(i);
+            
+            if (Character.isLowerCase(aktualnyZnak)) {
+                char nowyZnak = Character.toUpperCase(aktualnyZnak);
+                a = a.substring(0, i) + nowyZnak + a.substring(i + 1);
+                iloscZmian++;
+            }
+  }
+         System.out.println("Tekst po zamianie: " + a);
+        System.out.println("Ilość zmienionych liter: " + iloscZmian);
       break;
 
       case 2:
+  int iloscZmian2 = 0;
   System.out.println("Twoje slowo: "+ a);
-  System.out.println("Twoje slowo po modyfikacji: "+ a.toLowerCase());
+      for (int i = 0; i < a.length(); i++) {
+      char aktualnyZnak = a.charAt(i);
+            
+            if (Character.isUpperCase(aktualnyZnak)) {
+                char nowyZnak = Character.toLowerCase(aktualnyZnak);
+                a = a.substring(0, i) + nowyZnak + a.substring(i + 1);
+                iloscZmian2++;
+            }
+  }
+         System.out.println("Tekst po zamianie: " + a);
+        System.out.println("Ilość zmienionych liter: " + iloscZmian2);
       break;
 
      case 3:  
